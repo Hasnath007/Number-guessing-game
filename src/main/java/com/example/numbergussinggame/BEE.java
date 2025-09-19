@@ -15,7 +15,7 @@ public class BEE {
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         scoreColumn.setCellValueFactory(cellData -> cellData.getValue().scoreProperty().asObject());
 
-        // Attach static leaderboardData → TableView auto update
+
         leaderboardTable.setItems(HelloController.leaderboardData);
     }
 

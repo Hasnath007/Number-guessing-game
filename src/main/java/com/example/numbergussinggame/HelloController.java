@@ -19,7 +19,7 @@ public class HelloController {
     private int remainingAttempts = maxAttempts;
     private int secretNumber;
 
-    // In-memory leaderboard
+
     public static ObservableList<PlayerScore> leaderboardData = FXCollections.observableArrayList();
 
     @FXML
@@ -45,11 +45,11 @@ public class HelloController {
             if (guess > secretNumber) feedbackLabel.setText("Too High!");
             else if (guess < secretNumber) feedbackLabel.setText("Too Low!");
             else {
-                // Player wins
+
                 int points = remainingAttempts * 10;
                 feedbackLabel.setText("Correct! 🎉 You scored " + points + " points.");
 
-                // Prompt player name
+
                 TextInputDialog dialog = new TextInputDialog("Player" + (leaderboardData.size() + 1));
                 dialog.setTitle("You won!");
                 dialog.setHeaderText("Enter your name for the leaderboard:");
@@ -66,7 +66,7 @@ public class HelloController {
 
             if (remainingAttempts <= 0) {
                 feedbackLabel.setText("Game Over! You scored 0 points.");
-                // Lose → 0 points, automatically go to leaderboard
+
                 TextInputDialog dialog = new TextInputDialog("Player" + (leaderboardData.size() + 1));
                 dialog.setTitle("Game Over");
                 dialog.setHeaderText("Enter your name for the leaderboard:");
@@ -99,10 +99,9 @@ public class HelloController {
     private void addToLeaderboard(String name, int score) {
         leaderboardData.add(new PlayerScore(name, score));
 
-        // Sort descending by score
+
         leaderboardData.sort(Comparator.comparingInt(PlayerScore::getScore).reversed());
 
-        // Keep top 5
         if (leaderboardData.size() > 5) {
             leaderboardData.remove(5, leaderboardData.size());
         }

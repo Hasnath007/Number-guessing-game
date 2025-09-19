@@ -9,7 +9,7 @@
             fx:controller="com.example.numbergussinggame.HelloController"
             prefHeight="500.0" prefWidth="700.0">
 
-   <!-- Title -->
+
    <Label fx:id="titleLabel" layoutX="216.0" layoutY="51.0" prefHeight="53.0" prefWidth="235.0"
           text="Guess the Number!">
       <font>
@@ -17,18 +17,18 @@
       </font>
    </Label>
 
-   <!-- Input Label -->
+
    <Label layoutX="114.0" layoutY="133.0" text="Input Guess:">
       <font>
          <Font size="24.0"/>
       </font>
    </Label>
 
-   <!-- TextField -->
+
    <TextField fx:id="guessTextField" layoutX="242.0" layoutY="138.0"
               prefHeight="29.0" prefWidth="218.0"/>
 
-   <!-- Guess Button -->
+
    <Button fx:id="guessButton" layoutX="249.0" layoutY="199.0"
            prefHeight="51.0" prefWidth="200.0"
            text="Guess"
@@ -38,7 +38,7 @@
       </font>
    </Button>
 
-   <!-- Feedback Label -->
+
    <Label fx:id="feedbackLabel" alignment="CENTER" layoutX="293.0" layoutY="278.0"
           text="">
       <font>
@@ -46,25 +46,24 @@
       </font>
    </Label>
 
-   <!-- Progress Bar -->
+
    <ProgressBar fx:id="attemptsProgressBar" layoutX="248.0" layoutY="341.0"
                 prefWidth="200.0" progress="1.0"/>
 
-   <!-- Attempts Left Label -->
+
    <Label fx:id="attemptsLabel" layoutX="272.0" layoutY="377.0" text="Attempts Left: 7">
       <font>
          <Font size="24.0"/>
       </font>
    </Label>
 
-   <!-- Score Label (single, shows text + score) -->
    <Label fx:id="scoreLabel" layoutX="250.0" layoutY="421.0" text="Score: 0">
       <font>
          <Font size="24.0"/>
       </font>
    </Label>
 
-   <!-- Leaderboard Button -->
+   
    <Button fx:id="backButton" layoutX="196.0" layoutY="460.0"
            text="Leaderboard"
            onAction="#showLeaderboard"/>
